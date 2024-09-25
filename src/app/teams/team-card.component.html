@@ -1,0 +1,5 @@
+<div>
+    <span>{{team.name}}</span>
+    <img [src]="team.logo" width="150" height="150" class="shrinkToFit">
+    <a routerLink="../schedule" [queryParams]="{team: team.id}">Matchups</a>
+</div>

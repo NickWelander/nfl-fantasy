@@ -1,0 +1,11 @@
+.camera-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: #faf8fb;
+  box-shadow: inset 0 0 200px #0670a526;
+}
+
+h1 {
+  margin: 20px;
+}

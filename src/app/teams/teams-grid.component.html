@@ -1,0 +1,5 @@
+<br>
+<button (click)="getTeams()">get teams</button>
+<div class="teams-grid">
+    <team-card *ngFor="let team of teams" [team]="team"></team-card>
+</div>

@@ -1,0 +1,11 @@
+.schedule-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 900px;
+  box-shadow: inset 0 0 200px #0670a526;
+}
+
+h1 {
+  margin: 20px;
+}

@@ -1,0 +1,26 @@
+<!-- <div>
+    <span>Week {{event.week}}</span>
+    <span>{{event.homeGame ? '' : '@'}}{{event.opponent.name}}</span>
+    <div>
+        <img [src]="event.opponent.logo" width="100" height="100" class="shrinkToFit">
+        <span>{{event.opponent.athlete}}</span>
+    </div>
+</div> -->
+
+<div style="display: flex; flex-direction: row; border: 1px solid silver; padding: 10px">
+    <div style="display: flex; flex-direction: column;">
+        <span>Week {{event.week}}</span>
+        <div *ngFor="let team of event.teams" style="display: flex; flex-direction: row; width: 300px">
+            <img [src]="team.team.logos[0].href" width="20" height="20" class="shrinkToFit">
+            <span>{{team.team.displayName}}</span>
+            <span style="margin-left: auto;">{{team.score?.displayValue}}</span>
+            <span style="width: 5px">{{team.winner ? '&#9664;' : ''}}</span>
+        </div>
+    </div>
+    <div style="height: 70px; width: 1px; background: black; margin: 0 10px"></div>
+    <div style="display: flex; flex-direction: column;">
+        <span>{{event.final ? "Final" : ""}}</span>
+        <span>{{event.date | date: 'EE, MMM d'}}</span>
+        <span *ngIf="!event.final">{{event.date | date: 'h:mm a'}}</span>
+    </div>
+</div>

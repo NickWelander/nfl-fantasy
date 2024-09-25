@@ -1,0 +1,6 @@
+<br>
+<button (click)="getSchedule()">get</button>
+<h1>{{team.name}} 2024 schedule</h1>
+<div class="schedule-grid">
+    <schedule-card *ngFor="let event of schedule" [event]="event"></schedule-card>
+</div>
